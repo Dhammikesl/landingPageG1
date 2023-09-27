@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
+
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+
+$white: #ffffff;
+$black: #1f306e;
+$primary: #c7417b;
+$secondary: #f5487f;
+$accent: #8f3b76;
+$accent-light: #e08ec8;
+$primary-light: #F1FAFE;
+$txt-color: #ffffff;
+$gray: #8D8D8D;
+$dark-gray: #553772;
+$bg-color: #F8F9F9;
+
+
+// Links
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: lighten($primary, 20%);
+$link-hover-decoration: underline;
+
+// Fonts
+$font-family-base: "Open Sans", sans-serif, -apple-system;
+$font-family-heading: "Open Sans", "Roboto", sans-serif, sans-serif,
+    -apple-system;
+$font-size-base: 1rem; 
+$font-weight-thin: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.6;
+
+
+
+//mixins
+
+@mixin responsive-font($min-size, $max-size, $min-width: 320px, $max-width: 1920px, $min-line-height: 1, $max-line-height: 1) {
+    $vw-range: #{$max-width - $min-width};
+    $font-range: #{$max-size - $min-size};
+    $font-factor: $font-range / $vw-range;
+
+    $lh-range: #{$max-line-height - $min-line-height};
+    $lh-factor: $lh-range / $vw-range;
+
+    font-size: #{$min-size}px;
+    line-height: #{$min-line-height};
+
+    @media screen and (min-width: #{$min-width}) {
+        font-size: calc(#{$min-size}px + #{$font-factor} * (100vw - #{$min-width}px));
+        line-height: calc(#{$min-line-height} + #{$lh-factor} * (100vw - #{$min-width}px));
+    }
+
+    @media screen and (min-width: #{$max-width}) {
+        font-size: #{$max-size}px;
+        line-height: #{$max-line-height};
+    }
+}
+
+//buttons
+
+@mixin button-set($btn) {
+    background: $btn;
+    border-radius: 15px;
+    padding: 10px 20px;
+
+    &:hover {
+        background: darken($btn, 14%);
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        background: darken($btn, 14%);
+    }
+
+}
+
+.btn {
+    @include responsive-font(16, 26, 320px, 1920px, 1.2, 1.8);
+    border: none;
+    font-weight: 600;
+    text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, .1);
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+
+
+    &.btn-accent {
+        @include button-set($accent);
+        background-color: $accent;
+        color: $white;
+
+        &:focus {
+            background-color: $accent;
+            color: $white;
+        }
+    }
+
+    &.btn-accent-outline {
+        @include button-set($accent);
+        background-color: $white;
+        color: $accent;
+        border: 1px solid $accent;
+
+        &:focus {
+            background-color: $accent;
+            color: $white;
+        }
+
+        &:hover {
+            background-color: $accent;
+            color: $white;
+        }
+    }
+
+    &.btn-primary {
+        @include button-set($primary);
+        background-color: $secondary;
+        color: $white;
+
+        &:focus {
+            background-color: $secondary;
+            color: $white;
+        }
+
+    }
+
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
