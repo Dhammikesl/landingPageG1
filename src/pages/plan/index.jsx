@@ -6,7 +6,7 @@ const cardValues = {
     standard: {
         value: '29',
         type: 'Standard',
-        desc: 'Standard card Card Description',
+        desc: 'Standard Card Description',
         list: [
             'Lorem ipsum dolor sit amet',
             'consectetur adipiscing elit.',
@@ -17,7 +17,7 @@ const cardValues = {
     essentials: {
         value: '109',
         type: 'Essentials',
-        desc: 'Essentials card Description',
+        desc: 'Essentials Card Description',
         list: [
             'Lorem ipsum dolor sit amet',
             'consectetur adipiscing elit.',
@@ -28,7 +28,7 @@ const cardValues = {
     premium: {
         value: '300',
         type: 'Premium',
-        desc: 'Premium card Description',
+        desc: 'Premium Card Description',
         list: [
             'Lorem ipsum dolor sit amet',
             'consectetur adipiscing elit.',

@@ -13,6 +13,9 @@ const Menu = () => (
             <a href="#benefits">Benefits</a>
         </p>
         <p>
+            <a href="#testimonials">Testimonials</a>
+        </p>
+        <p>
             <a href="#choose-plan">Choose a Plan</a>
         </p>
         <p>

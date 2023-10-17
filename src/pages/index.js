@@ -9,20 +9,22 @@ import GetInTouch from './getIn';
 import ScrlTop from '../component/ScrlTop';
 import SEO from '../component/SEO';
 import ChoosePlan from './plan';
+import Testimonial from './testimo';
 
 const index = () => {
   return (
     <>
       <div className='container-fluid wrap-content'>
         <SEO
-          title="NDISpensable: Revolutionise Your Operations Efficiency"
-          description="Elevate Your NDIS Operations - Personalized Cloud Solution for Enhanced Efficiency."
+          title="Landing Page Gatsby/ React"
+          description="Landing Page Gatsby/ React: RMDP Rathnayaka 2023."
           image="../images/logo.png"
         />
         <Navbar />
         <Hero />
         <Features />
         <Benefits />
+        <Testimonial />
         <ChoosePlan />
         <GetInTouch />
 
