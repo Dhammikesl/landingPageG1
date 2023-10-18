@@ -15,13 +15,15 @@ const Benefit = () => {
                         </div>
                         <div className='content'>
                             <div className='row'>
-                                {benefitsArray.map((benefit, id) => (
-                                    <div className='col-12 col-lg-6 col-md-12' key={id}>
+                                {benefitsArray.map((benefit) => (
+                                    <div className='col-12 col-lg-6 col-md-12' key={benefit.id}>
                                         <div className='wrap-data'>
                                             <div className='title-5'>{benefit.title}</div>
                                             <ul>
                                                 {benefit.list.map((item) => (
-                                                    <span className='txt'>   <li key={item.id}>{item.text}</li></span>
+                                                    <span className='txt' key={item.id}>
+                                                        <li>{item.text}</li>
+                                                    </span>
                                                 ))}
                                             </ul>
                                         </div>

@@ -51,7 +51,7 @@ const Testimonial = () => {
                             <CardBody>
                                 <Carousel>
                                     {carouselCards.map(card => (
-                                        <Carousel.Item key={carouselCards.id}>
+                                        <Carousel.Item key={card.id}>
                                             <div className='c-inside'>
                                                 <div className='img'><img className='pic' src={card.src} alt={card.alt} /></div>
                                                 <div className='detail'>

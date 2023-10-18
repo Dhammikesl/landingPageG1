@@ -13,12 +13,24 @@ const Features = () => {
                         <div className='sub-title-2'>Discover the latest enhancements designed to elevate your experience and streamline your workflow effortlessly.</div>
                     </div>
                     <div className='crd-set'>
-                        <FeCard src={features.feature1.src} alt={features.feature1.alt} title={features.feature1.title} description={features.feature1.description} />
+                        {/* <FeCard src={features.feature1.src} alt={features.feature1.alt} title={features.feature1.title} description={features.feature1.description} />
                         <FeCard even={true} src={features.feature2.src} alt={features.feature2.alt} title={features.feature2.title} description={features.feature2.description} />
                         <FeCard src={features.feature3.src} alt={features.feature3.alt} title={features.feature3.title} description={features.feature3.description} />
                         <FeCard even={true} src={features.feature4.src} alt={features.feature4.alt} title={features.feature4.title} description={features.feature4.description} />
                         <FeCard src={features.feature5.src} alt={features.feature5.alt} title={features.feature5.title} description={features.feature5.description} />
-                        <FeCard even={true} src={features.feature6.src} alt={features.feature6.alt} title={features.feature6.title} description={features.feature6.description} />
+                        <FeCard even={true} src={features.feature6.src} alt={features.feature6.alt} title={features.feature6.title} description={features.feature6.description} /> */}
+
+                        {/* {features.map((feature) => {
+                            return <FeCard {...feature} />
+                        })} to use spread method features should be in array. and not divided in to odd/ even*/}
+
+                        <FeCard {...features.feature1} />
+                        <FeCard {...features.feature2} even={true} />
+                        <FeCard {...features.feature3} />
+                        <FeCard {...features.feature4} even={true} />
+                        <FeCard {...features.feature5} />
+                        <FeCard {...features.feature6} even={true} />
+
                     </div>
                 </div>
             </div>
